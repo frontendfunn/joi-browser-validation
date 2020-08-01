@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontendfunn - Joi Browser Form Validation</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="text-center bg-info text-white p-2 mt-2">
+            Bootstrap 4.5 Form Validation using
+            <a
+              href="https://github.com/sideway/joi/"
+              class="text-dark p-2 d-inline-flex bg-warning"
+              >@sideway/joi</a
+            >
+          </h4>
+        </div>
+        <div class="col-md-12">
+          <a
+            href="https://www.jsdelivr.com/package/npm/joi"
+            target="_blank"
+            class="nav-link"
+            >JOI CDN Link</a
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form action="#" class="contact-form mb-5">
+            <!-- alert message -->
+            <div class="row">
+              <div class="col-md-8 offset-md-2">
+                <div
+                  class="alert alert-success alert-dismissible fade"
+                  role="alert"
+                  id="responseMessage"
+                >
+                  <strong>Yay!</strong> Form Submitted Successfully.
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- alert message -->
+            <!-- name -->
+            <div class="form-group">
+              <label for="username">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                placeholder="Enter Your Name"
+              />
+              <div class="invalid-feedback"></div>
+            </div>
+            <!-- name -->
+
+            <!-- email -->
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" />
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <!-- password -->
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" />
+              <div class="invalid-feedback"></div>
+            </div>
+            <!-- mobile Number -->
+            <div class="form-group">
+              <label for="mobileNumber">Mobile Number</label>
+              <input type="text" class="form-control" id="mobileNumber" />
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <!-- checkbox -->
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="rememberMe" />
+              <label class="form-check-label" for="rememberMe"
+                >Remember Me</label
+              >
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <!-- single select -->
+            <div class="form-group">
+              <label for="selectDropdown">Select a Random Number</label>
+              <select class="form-control" id="selectDropdown">
+                <option value="-1" selected disabled
+                  >Please Select a Number</option
+                >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <!-- textarea -->
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <!-- submit button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/joi@17.1.1/dist/joi-browser.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
